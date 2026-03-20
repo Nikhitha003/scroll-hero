@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  background: #0f2027;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#0f2027, #203a43);
+  z-index: 1;
+}
+
+.mountain {
+  position: absolute;
+  width: 250%;
+  height: 450px;
+  bottom: 100px;
+  background: url("https://pngimg.com/uploads/mountain/mountain_PNG18.png") repeat-x;
+  background-size: contain;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.road {
+  position: absolute;
+  bottom: 0;
+  width: 500%;
+  height: 160px;
+  background: #111;
+  border-top: 4px solid #333;
+  z-index: 3;
+}
+
+.road::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, transparent, transparent 80px, #fff 80px, #fff 160px);
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin-top: 10vh;
+  color: white;
+}
+
+.title {
+  font-size: 4rem;
+  letter-spacing: 20px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.stat { font-weight: bold; font-size: 1.5rem; }
+.stat span { display: block; font-size: 0.8rem; color: #aaa; text-transform: uppercase; }
+
+.car {
+  position: absolute;
+  bottom: 30px;
+  left: -20%; 
+  z-index: 10;
+}
+
+.car img {
+  width: 450px;
+  filter: drop-shadow(0 15px 10px rgba(0,0,0,0.5));
+  transform: scaleX(-1);
+}
+
+.extra {
+  height: 150vh;
+  background: #0f2027;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+.scroll-text { color: white; letter-spacing: 5px; opacity: 0.5; }
